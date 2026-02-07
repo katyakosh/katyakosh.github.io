@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YDHRVJ4V8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3YDHRVJ4V8');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToWholeness | Events</title>
+  <meta name="description" content="Events and gatherings by ToWholeness. Women's circles, lunar rituals, and spaces for rest and attunement.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf8f5;
+      --text: #3d3a36;
+      --text-secondary: #6b6560;
+      --text-muted: #9a948d;
+      --accent: #b8a99a;
+      --card-bg: #ffffff;
+      --border: rgba(139, 126, 112, 0.1);
+      --shadow: 0 4px 20px rgba(139, 126, 112, 0.08);
+      --shadow-hover: 0 12px 40px rgba(139, 126, 112, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header */
+    header {
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .lang-switch {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .lang-switch a {
+      transition: color 0.3s ease;
+    }
+
+    .lang-switch a:hover {
+      color: var(--accent);
+    }
+
+    .lang-switch a.active {
+      color: var(--accent);
+    }
+
+    /* Main content */
+    main {
+      flex: 1;
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Event card */
+    .event-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.4s ease;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .event-card-content {
+      padding: 1.5rem;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    .event-card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .event-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .event-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+
+    .event-tag {
+      background: var(--bg);
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--text-muted);
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+
+    .credit {
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      opacity: 0.5;
+    }
+
+    /* Cookie banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      max-width: 400px;
+      background: var(--card-bg);
+      padding: 1.25rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      z-index: 9999;
+      display: none;
+      border: 1px solid var(--border);
+    }
+
+    .cookie-banner.show {
+      display: block;
+      animation: slideUp 0.4s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .cookie-banner p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .cookie-btn {
+      padding: 0.6rem 1.25rem;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cookie-btn.accept {
+      background: linear-gradient(135deg, #d4c8bb 0%, #e8c4a8 100%);
+      color: #fff;
+    }
+
+    .cookie-btn.accept:hover {
+      transform: translateY(-2px);
+    }
+
+    .cookie-btn.reject {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .cookie-btn.reject:hover {
+      border-color: var(--text-secondary);
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 480px) {
+      .cookie-banner {
+        left: 0.5rem;
+        right: 0.5rem;
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo"><a href="https://towholeness.com">ToWholeness</a></h1>
+    <p class="tagline">Spaces for rest, attunement, and returning to your truth</p>
+    <div class="lang-switch">
+      <a href="index.html" class="active">En</a> / <a href="index-ru.html">Ru</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="events-grid">
+      <a href="rest-space-2026.html" class="event-card">
+        <img src="img/rest-space.png" alt="Rest Space">
+        <div class="event-card-content">
+          <h2>Rest Space</h2>
+          <p>A women's gathering for deep rest, gentle presence, and returning to your authentic self.</p>
+          <div class="event-meta">
+            <span>July 1 | 18:00-19:30 CET</span>
+            <span class="event-tag">Rest</span>
+          </div>
+        </div>
+      </a>
+      <a href="moon-circle-2026-e0281871.html" class="event-card">
+        <img src="img/night.png" alt="Moon Circle">
+        <div class="event-card-content">
+          <h2>Moon Circle 2026</h2>
+          <p>A women's circle to slow down, hear yourself, and live in attunement with lunar rhythms.</p>
+          <div class="event-meta">
+            <span>Feb – Mar 2026</span>
+            <span class="event-tag">Lunar</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ToWholeness. All rights reserved.</p>
+    <p class="credit">Designed by <a href="https://hodosstudio.com" target="_blank">Hodos Studio</a></p>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies for analytics to improve your experience. No personal data is sold.</p>
+    <div class="cookie-buttons">
+      <button id="cookie-accept" class="cookie-btn accept">Accept</button>
+      <button id="cookie-reject" class="cookie-btn reject">Decline</button>
+    </div>
+  </div>
+
+  <script>
+    // Cookie consent
+    (function() {
+      const banner = document.getElementById('cookie-banner');
+      if (!localStorage.getItem('cookies-accepted')) {
+        setTimeout(() => {
+          banner.classList.add('show');
+        }, 1500);
+      }
+
+      document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookies-accepted', 'true');
+        banner.classList.remove('show');
+      });
+
+      document.getElementById('cookie-reject').addEventListener('click', function() {
+        localStorage.setItem('cookies-accepted', 'false');
+        banner.classList.remove('show');
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YDHRVJ4V8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3YDHRVJ4V8');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пространство Отдыха | ToWholeness</title>
+  <meta name="description" content="Пространство Отдыха: время тишины, когда жизнь бьет ключом. Женская онлайн-встреча 1 июля, 18:00-19:30 CET.">
+
+  <!-- Open Graph / Facebook / WhatsApp / Telegram -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Пространство Отдыха | ToWholeness">
+  <meta property="og:description" content="Время тишины, когда жизнь бьет ключом. Женская онлайн-встреча 1 июля, 18:00-19:30 CET.">
+  <meta property="og:image" content="https://events.towholeness.com/img/rest-space-thumb.png">
+  <meta property="og:url" content="https://events.towholeness.com/rest-space-2026-ru.html">
+
+  <!-- Twitter / X.com -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Пространство Отдыха | ToWholeness">
+  <meta name="twitter:description" content="Время тишины, когда жизнь бьет ключом. Женская онлайн-встреча 1 июля, 18:00-19:30 CET.">
+  <meta name="twitter:image" content="https://events.towholeness.com/img/rest-space-thumb.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== CSS VARIABLES - THEME SYSTEM ===== */
+    :root {
+      /* Light theme - soft pastels, breeze */
+      --bg-primary: #faf8f5;
+      --bg-secondary: #f5f0eb;
+      --bg-card: #ffffff;
+      --text-primary: #3d3a36;
+      --text-secondary: #6b6560;
+      --text-muted: #9a948d;
+      --accent-primary: #b8a99a;
+      --accent-secondary: #d4c8bb;
+      --accent-warm: #e8c4a8;
+      --gradient-hero: linear-gradient(180deg, #fdfcfa 0%, #f5ede5 50%, #ebe3d9 100%);
+      --gradient-section: linear-gradient(180deg, #f5f0eb 0%, #faf8f5 100%);
+      --gradient-accent: linear-gradient(135deg, #d4c8bb 0%, #e8c4a8 100%);
+      --shadow-soft: 0 4px 30px rgba(139, 126, 112, 0.08);
+      --shadow-hover: 0 15px 50px rgba(139, 126, 112, 0.12);
+      --border-color: rgba(139, 126, 112, 0.1);
+
+      /* Breeze particles */
+      --particle-1: rgba(200, 210, 220, 0.4);
+      --particle-2: rgba(180, 195, 210, 0.3);
+      --particle-3: rgba(220, 225, 230, 0.5);
+    }
+
+    [data-theme="dark"] {
+      /* Dark theme - deep blue with fire accents */
+      --bg-primary: #0f1419;
+      --bg-secondary: #1a1f28;
+      --bg-card: #1e2430;
+      --text-primary: #e8e4df;
+      --text-secondary: #a8a29e;
+      --text-muted: #78716c;
+      --accent-primary: #c9a86c;
+      --accent-secondary: #e07a3d;
+      --accent-warm: #ff6b35;
+      --gradient-hero: linear-gradient(180deg, #0f1419 0%, #151b24 50%, #1a212d 100%);
+      --gradient-section: linear-gradient(180deg, #1a1f28 0%, #0f1419 100%);
+      --gradient-accent: linear-gradient(135deg, #c9a86c 0%, #e07a3d 100%);
+      --shadow-soft: 0 4px 30px rgba(0, 0, 0, 0.3);
+      --shadow-hover: 0 15px 50px rgba(201, 168, 108, 0.15);
+      --border-color: rgba(201, 168, 108, 0.15);
+
+      /* Fire particles */
+      --particle-1: rgba(255, 107, 53, 0.6);
+      --particle-2: rgba(224, 122, 61, 0.5);
+      --particle-3: rgba(201, 168, 108, 0.4);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+      transition: background 0.6s ease, color 0.6s ease;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    /* ===== ANIMATED BACKGROUND PARTICLES ===== */
+    .particles-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0;
+      animation: particleFloat 15s ease-in-out infinite;
+    }
+
+    /* Breeze animation - light theme */
+    @keyframes particleFloat {
+      0% {
+        opacity: 0;
+        transform: translateY(100vh) translateX(0) scale(0.5);
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-10vh) translateX(100px) scale(1);
+      }
+    }
+
+    /* Fire animation - dark theme */
+    [data-theme="dark"] .particle {
+      animation: fireFloat 8s ease-out infinite;
+    }
+
+    @keyframes fireFloat {
+      0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0) scale(0.3);
+      }
+      20% {
+        opacity: 1;
+      }
+      60% {
+        opacity: 0.8;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-200px) translateX(var(--drift, 20px)) scale(0);
+      }
+    }
+
+    [data-theme="dark"] .particle::after {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      background: radial-gradient(circle, var(--particle-1) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(3px);
+    }
+
+    /* Generate particles dynamically */
+    .particle:nth-child(1) { left: 10%; width: 8px; height: 8px; background: var(--particle-1); animation-delay: 0s; --drift: -30px; }
+    .particle:nth-child(2) { left: 20%; width: 6px; height: 6px; background: var(--particle-2); animation-delay: 2s; --drift: 40px; }
+    .particle:nth-child(3) { left: 35%; width: 10px; height: 10px; background: var(--particle-3); animation-delay: 4s; --drift: -20px; }
+    .particle:nth-child(4) { left: 45%; width: 5px; height: 5px; background: var(--particle-1); animation-delay: 1s; --drift: 50px; }
+    .particle:nth-child(5) { left: 55%; width: 7px; height: 7px; background: var(--particle-2); animation-delay: 3s; --drift: -45px; }
+    .particle:nth-child(6) { left: 65%; width: 9px; height: 9px; background: var(--particle-3); animation-delay: 5s; --drift: 25px; }
+    .particle:nth-child(7) { left: 75%; width: 6px; height: 6px; background: var(--particle-1); animation-delay: 2.5s; --drift: -35px; }
+    .particle:nth-child(8) { left: 85%; width: 8px; height: 8px; background: var(--particle-2); animation-delay: 4.5s; --drift: 30px; }
+    .particle:nth-child(9) { left: 30%; width: 4px; height: 4px; background: var(--particle-3); animation-delay: 1.5s; --drift: -15px; }
+    .particle:nth-child(10) { left: 70%; width: 5px; height: 5px; background: var(--particle-1); animation-delay: 3.5s; --drift: 45px; }
+    .particle:nth-child(11) { left: 15%; width: 7px; height: 7px; background: var(--particle-2); animation-delay: 6s; --drift: -25px; }
+    .particle:nth-child(12) { left: 90%; width: 6px; height: 6px; background: var(--particle-3); animation-delay: 7s; --drift: 20px; }
+
+    /* Fire base glow for dark theme */
+    [data-theme="dark"] .particles-container::after {
+      content: '';
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 150px;
+      background: radial-gradient(ellipse at bottom, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ===== THEME TOGGLE ===== */
+    .theme-toggle {
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 50%;
+      background: var(--bg-card);
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .theme-toggle .icon {
+      font-size: 1.4rem;
+      transition: transform 0.5s ease, opacity 0.3s ease;
+    }
+
+    .theme-toggle .sun {
+      position: absolute;
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+
+    .theme-toggle .moon {
+      position: absolute;
+      opacity: 0;
+      transform: rotate(-90deg);
+    }
+
+    [data-theme="dark"] .theme-toggle .sun {
+      opacity: 0;
+      transform: rotate(90deg);
+    }
+
+    [data-theme="dark"] .theme-toggle .moon {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1.25rem 2rem;
+      background: transparent;
+      transition: all 0.4s ease;
+    }
+
+    nav.scrolled {
+      background: var(--bg-primary);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-soft);
+      padding: 1rem 2rem;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-primary);
+    }
+
+    .nav-links .lang-switch {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      opacity: 0.7;
+    }
+
+    .nav-links .lang-switch a {
+      font-size: 0.8rem;
+    }
+
+    .nav-links .lang-switch a.active {
+      color: var(--accent-primary);
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: var(--gradient-hero);
+      overflow: hidden;
+      padding: 6rem 2rem 4rem;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      position: absolute;
+      inset: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .hero-bg .img-day {
+      opacity: 1;
+    }
+
+    .hero-bg .img-night {
+      opacity: 0;
+    }
+
+    [data-theme="dark"] .hero-bg .img-day {
+      opacity: 0;
+    }
+
+    [data-theme="dark"] .hero-bg .img-night {
+      opacity: 1;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(250, 248, 245, 0.3) 0%,
+        rgba(250, 248, 245, 0.6) 50%,
+        rgba(250, 248, 245, 0.95) 100%
+      );
+    }
+
+    [data-theme="dark"] .hero-bg::after {
+      background: linear-gradient(
+        180deg,
+        rgba(15, 20, 25, 0.2) 0%,
+        rgba(15, 20, 25, 0.5) 50%,
+        rgba(15, 20, 25, 0.9) 100%
+      );
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(ellipse, var(--accent-secondary) 0%, transparent 70%);
+      opacity: 0.15;
+      animation: gentlePulse 8s ease-in-out infinite;
+      z-index: 2;
+    }
+
+    @keyframes gentlePulse {
+      0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.15; }
+      50% { transform: translateX(-50%) scale(1.1); opacity: 0.2; }
+    }
+
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      max-width: 800px;
+    }
+
+    [data-theme="dark"] .hero-content {
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-card);
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-soft);
+      letter-spacing: 0.05em;
+    }
+
+    .hero-badge .moon-icon {
+      font-size: 1.1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      font-weight: 300;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .hero h1 .highlight {
+      display: block;
+      font-style: italic;
+      background: linear-gradient(135deg, #8b7355 0%, #a67c52 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    [data-theme="dark"] .hero h1 .highlight {
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 550px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      border: none;
+      letter-spacing: 0.03em;
+    }
+
+    .btn-primary {
+      background: var(--gradient-accent);
+      color: #fff;
+      box-shadow: 0 10px 40px rgba(184, 169, 154, 0.3);
+    }
+
+    [data-theme="dark"] .btn-primary {
+      box-shadow: 0 10px 40px rgba(201, 168, 108, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 50px rgba(184, 169, 154, 0.4);
+    }
+
+    [data-theme="dark"] .btn-primary:hover {
+      box-shadow: 0 15px 50px rgba(201, 168, 108, 0.35);
+    }
+
+    /* ===== SECTIONS BASE ===== */
+    section {
+      position: relative;
+      z-index: 1;
+      padding: 6rem 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      background: var(--bg-card);
+      color: var(--accent-primary);
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .section-header p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ===== FOR WHOM SECTION ===== */
+    .for-whom {
+      background: var(--gradient-section);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 968px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-color);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* ===== INTENTION SECTION ===== */
+    .intention {
+      background: var(--bg-primary);
+    }
+
+    .intention-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .intention-content p {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      line-height: 2;
+      font-style: italic;
+    }
+
+    /* ===== FORMAT SECTION ===== */
+    .format {
+      background: var(--gradient-section);
+    }
+
+    .format-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .format-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-card);
+      border-radius: 16px;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.3s ease;
+    }
+
+    .format-item:hover {
+      transform: translateX(10px);
+    }
+
+    .format-item .icon {
+      font-size: 1.3rem;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-secondary);
+      border-radius: 12px;
+    }
+
+    .format-item span {
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    .format-note {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    /* ===== SCHEDULE SECTION ===== */
+    .schedule {
+      background: var(--bg-primary);
+    }
+
+    .schedule-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .schedule-card {
+      background: var(--bg-card);
+      border-radius: 24px;
+      padding: 2.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-color);
+      transition: all 0.4s ease;
+    }
+
+    .schedule-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .schedule-card .moon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .schedule-card h3 {
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .schedule-card .date {
+      color: var(--accent-primary);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .schedule-card .time {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .schedule-card .add-calendar {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--accent-primary);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .schedule-card .add-calendar:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .schedule-info {
+      text-align: center;
+      color: var(--text-secondary);
+    }
+
+    .schedule-info p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== TAKEAWAYS SECTION ===== */
+    .takeaways {
+      background: var(--gradient-section);
+    }
+
+    /* ===== FACILITATOR SECTION ===== */
+    .facilitator {
+      background: var(--bg-primary);
+    }
+
+    .facilitator-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .facilitator-image {
+      position: relative;
+    }
+
+    .facilitator-image img {
+      width: 100%;
+      max-width: 280px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .facilitator-text h3 {
+      font-size: 1.8rem;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .facilitator-text p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+
+    /* ===== DETAILS SECTION ===== */
+    .details {
+      background: var(--gradient-section);
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .detail-item {
+      grid-column: span 2;
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .details-grid .detail-item:nth-child(5):last-child {
+      grid-column: 4 / span 2;
+    }
+
+    .detail-item .label {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .detail-item .value {
+      color: var(--text-primary);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+    }
+
+    /* ===== INVITATION / CTA SECTION ===== */
+    .invitation {
+      background: var(--bg-card);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .invitation::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at center, var(--accent-secondary) 0%, transparent 70%);
+      opacity: 0.08;
+    }
+
+    .invitation-content {
+      position: relative;
+      z-index: 10;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .invitation h2 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .invitation p {
+      color: var(--text-secondary);
+      font-size: 1.15rem;
+      line-height: 1.9;
+      margin-bottom: 2rem;
+    }
+
+    /* ===== NEWSLETTER FORM ===== */
+    .newsletter-section {
+      background: var(--gradient-accent);
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .newsletter-content {
+      max-width: 500px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    .newsletter-content h3 {
+      color: #fff;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter-content p {
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 2rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .newsletter-form input[type="email"] {
+      flex: 1;
+      min-width: 250px;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      outline: none;
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--text-primary);
+    }
+
+    .newsletter-form input[type="email"]:focus {
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+    }
+
+    .newsletter-form input[type="submit"] {
+      padding: 1rem 2rem;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      border: none;
+      border-radius: 50px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .newsletter-form input[type="submit"]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .newsletter-form label {
+      display: none;
+    }
+
+    .newsletter-contact {
+      margin: 1rem 0 0;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .newsletter-contact a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .powered-by {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .powered-by a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact {
+      background: var(--bg-secondary);
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .contact p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      color: var(--accent-primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .contact-links a:hover {
+      color: var(--accent-secondary);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--bg-primary);
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+    }
+
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* ===== COOKIE BANNER ===== */
+    .cookie-banner {
+      position: fixed;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      max-width: 400px;
+      background: var(--bg-card);
+      padding: 1.25rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      z-index: 9999;
+      display: none;
+      border: 1px solid var(--border-color);
+    }
+
+    .cookie-banner.show {
+      display: block;
+      animation: slideUp 0.4s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .cookie-banner p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .cookie-btn {
+      padding: 0.6rem 1.25rem;
+      border: none;
+      border-radius: 50px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cookie-btn.accept {
+      background: var(--gradient-accent);
+      color: #fff;
+    }
+
+    .cookie-btn.accept:hover {
+      transform: translateY(-2px);
+    }
+
+    .cookie-btn.reject {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+    }
+
+    .cookie-btn.reject:hover {
+      border-color: var(--text-secondary);
+      color: var(--text-secondary);
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .facilitator-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .facilitator-image img {
+        max-width: 200px;
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 8rem 1.5rem 4rem;
+      }
+
+      section {
+        padding: 4rem 1.5rem;
+      }
+
+      .details-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .detail-item {
+        grid-column: auto;
+      }
+
+      .details-grid .detail-item:nth-child(5):last-child {
+        grid-column: 1 / -1;
+      }
+
+      .cookie-banner {
+        left: 0.5rem;
+        right: 0.5rem;
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form input[type="email"],
+      .newsletter-form input[type="submit"] {
+        width: 100%;
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <!-- Animated Background Particles -->
+  <div class="particles-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index-ru.html" class="logo">ToWholeness</a>
+      <div class="nav-center">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+          <span class="icon sun">&#9728;</span>
+          <span class="icon moon">&#9790;</span>
+        </button>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">О встрече</a></li>
+        <li><a href="#format">Формат</a></li>
+        <li><a href="#facilitator">Обо мне</a></li>
+        <li><a href="#details">Детали</a></li>
+        <li class="lang-switch"><a href="rest-space-2026.html">En</a> / <a href="rest-space-2026-ru.html" class="active">Ru</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img
+        class="img-day"
+        src="img/rest-space.png"
+        alt="Спокойный дневной пейзаж"
+        loading="eager"
+      />
+      <img
+        class="img-night"
+        src="img/rest-space.png"
+        alt="Мистический ночной пейзаж"
+        loading="eager"
+      />
+    </div>
+    <div class="hero-content fade-in">
+      <div class="hero-badge">
+        <span class="moon-icon">&#9790;</span>
+        1 июля | 18:00-19:30 CET
+      </div>
+      <h1>
+        Пространство Отдыха:
+        <span class="highlight">время тишины, когда жизнь бьет ключом</span>
+      </h1>
+      <h2>Женская встреча для глубокого отдыха, бережного присутствия и возвращения к себе</h2>
+      <p class="hero-description">
+        Как сохранять связь со своей истинной, сокровенной и уязвимой сутью в период, когда внешние энергии достигают своего пика?
+      </p>
+      <a href="#details" class="btn btn-primary">Детали встречи</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="for-whom">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">О встрече</span>
+        <h2>Как оставаться в контакте с собой</h2>
+        <p>
+          Впереди лето, солнцестояние, а скоро за ним полнолуние - время, когда внешние энергии достигают своего пика.
+          А что будет происходить с нашими внутренними энергиями?
+        </p>
+      </div>
+      <div class="cards-grid">
+        <div class="card fade-in">
+          <div class="card-icon">&#128164;</div>
+          <p>Настоящий глубокий отдых помогает сохранять связь со своей истинной, сокровенной и уязвимой сутью.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">&#127774;</div>
+          <p>Мы посмотрим, достаточно ли замедляемся, чтобы уберечь свой внутренний свет в интенсивный период.</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">&#129293;</div>
+          <p>Это бережное, принимающее пространство, где можно побыть в теплом коконе поддержки, принятия и любви.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intention Section -->
+  <section id="intention" class="intention">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Намерение</span>
+        <h2>Разрешить своей красоте проявиться</h2>
+      </div>
+      <div class="intention-content fade-in">
+        <p>
+          Для того, чтобы быть по настоящему собой и позволить себе проявляться как есть,
+          мне нужно стать максимально открытой и уязвимой. Для этого мне нужно много
+          поддержки, принятия и любви. В том числе от себя.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Format Section -->
+  <section id="format" class="format">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Практика</span>
+        <h2>Как будет проходить встреча</h2>
+      </div>
+      <div class="format-list fade-in">
+        <div class="format-item">
+          <div class="icon">&#129496;</div>
+          <span>Мы соберемся, замедлимся и создадим общее бережное пространство</span>
+        </div>
+        <div class="format-item">
+          <div class="icon">&#128716;</div>
+          <span>Будет йога-нидра медитация в стиле Daring to Rest - практика глубочайшего расслабления</span>
+        </div>
+        <div class="format-item">
+          <div class="icon">&#128173;</div>
+          <span>Затем будет время для рефлексии и возможность поделиться тем, что пришло во время практики, если захочется</span>
+        </div>
+      </div>
+      <p class="format-note fade-in">
+        Формат мягкий и бережный: можно оставаться в своем темпе и делиться только при желании.
+      </p>
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule" class="schedule">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Когда</span>
+        <h2>Дата и время</h2>
+      </div>
+      <div class="schedule-cards fade-in">
+        <div class="schedule-card">
+          <div class="moon">&#127765;</div>
+          <h3>Пространство Отдыха</h3>
+          <p class="date">1 июля</p>
+          <p class="time">18:00-19:30 CET</p>
+        </div>
+      </div>
+      <div class="schedule-info fade-in">
+        <p>Онлайн через Zoom</p>
+        <p>Продолжительность: 90 минут</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Takeaways Section -->
+  <section id="takeaways" class="takeaways">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Пространство</span>
+        <h2>Для чего мы собираемся</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="card fade-in">
+          <div class="card-icon">&#129782;</div>
+          <p>Нащупать и ощутить свою красоту</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">&#128330;</div>
+          <p>Побыть в тишине и бережном присутствии</p>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">&#128150;</div>
+          <p>Позволить себе проявляться как есть</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilitator Section -->
+  <section id="facilitator" class="facilitator">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Ведущая</span>
+        <h2>Кто ведёт этот круг</h2>
+      </div>
+      <div class="facilitator-content fade-in">
+        <div class="facilitator-image">
+          <img src="img/katya.png" alt="Катя" />
+        </div>
+        <div class="facilitator-text">
+          <h3>Катя</h3>
+          <p>
+            Я бережно поддерживаю пространство и направляю женщин на пути к глубокому
+            отдыху и раскрытию своего истинного потенциала. Мой подход соединяет в себе
+            укореняющую глубину практик Daring to Rest, циклическую мудрость Менструальности
+            и чуткое присутствие Гештальт-подхода. Я создаю бережные, принимающие и
+            поддерживающие встречи.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details Section -->
+  <section id="details" class="details">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Информация</span>
+        <h2>Детали</h2>
+      </div>
+      <div class="details-grid fade-in">
+        <div class="detail-item">
+          <p class="label">Формат</p>
+          <p class="value">Онлайн</p>
+        </div>
+        <div class="detail-item">
+          <p class="label">Дата</p>
+          <p class="value">1 июля</p>
+        </div>
+        <div class="detail-item">
+          <p class="label">Время</p>
+          <p class="value">18:00-19:30 CET</p>
+        </div>
+        <div class="detail-item">
+          <p class="label">Практика</p>
+          <p class="value">Йога-нидра</p>
+        </div>
+        <!-- <div class="detail-item">
+          <p class="label">Стоимость</p>
+          <p class="value">11 евро или 1100 рублей</p>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Invitation Section -->
+  <section class="invitation">
+    <div class="container">
+      <div class="invitation-content fade-in">
+        <h2>Приглашение в пространство отдыха</h2>
+        <p>
+          Я создаю этот круг, чтобы сотворить бережное, принимающее пространство,
+          где можно будет побыть в теплом коконе, нащупать, ощутить и, может быть,
+          даже позволить своей красоте проявить себя.
+        </p>
+        <a href="#newsletter" class="btn btn-primary">Оставаться на связи</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="newsletter-section">
+    <div class="newsletter-content fade-in">
+      <h3>Оставайся на связи</h3>
+      <p>Получай обновления о предстоящих кругах и практиках глубокого отдыха.</p>
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/towholeness"
+        method="post"
+        class="newsletter-form embeddable-buttondown-form"
+        referrerpolicy="unsafe-url"
+      >
+        <label for="bd-email">Введи email</label>
+        <input type="email" name="email" id="bd-email" placeholder="твой@email.com" required />
+        <input type="submit" value="Подписаться" />
+      </form>
+      <p class="newsletter-contact">
+        Если у тебя есть вопросы, напиши мне на <a href="mailto:katya@towholeness.com">katya@towholeness.com</a>.
+      </p>
+      <p class="powered-by">
+        <a href="https://buttondown.com/refer/towholeness" target="_blank">Рассылка через Buttondown</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="container">
+      <p>Вопросы? Напиши:</p>
+      <div class="contact-links">
+        <a href="https://t.me/+Nr7GaOmlW8pjMjI0" target="_blank">Telegram</a>
+        <a href="https://instagram.com/to.wholeness" target="_blank">Instagram</a>
+        <a href="mailto:katya@towholeness.com">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 ToWholeness. Все права защищены.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.5;">Designed by <a href="https://hodosstudio.com" target="_blank" style="color: inherit;">Hodos Studio</a></p>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>Мы используем cookies для аналитики. Личные данные не продаются.</p>
+    <div class="cookie-buttons">
+      <button id="cookie-accept" class="cookie-btn accept">Принять</button>
+      <button id="cookie-reject" class="cookie-btn reject">Отклонить</button>
+    </div>
+  </div>
+
+  <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.body;
+
+    // Check for saved theme preference or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme) {
+      html.setAttribute('data-theme', savedTheme);
+    } else if (prefersDark) {
+      html.setAttribute('data-theme', 'dark');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Navbar scroll effect
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Fade in on scroll
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Cookie consent
+    (function() {
+      const banner = document.getElementById('cookie-banner');
+      if (!localStorage.getItem('cookies-accepted')) {
+        setTimeout(() => {
+          banner.classList.add('show');
+        }, 1500);
+      }
+
+      document.getElementById('cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookies-accepted', 'true');
+        banner.classList.remove('show');
+        // Load analytics here if needed
+      });
+
+      document.getElementById('cookie-reject').addEventListener('click', function() {
+        localStorage.setItem('cookies-accepted', 'false');
+        banner.classList.remove('show');
+      });
+    })();
+  </script>
+</body>
+</html>
